@@ -1,0 +1,31 @@
+## ----------------------------------------------------------------------------
+##  nexus | ArgonSphereGen.init.mac
+##
+## Initialization macro to simulate 83-Bi decays in the ArSphere geometry
+## with generation and transportation of Bismuth Decays.
+##
+## The NEXT Collaboration
+## ----------------------------------------------------------------------------
+
+# VERBOSITY
+/run/verbose 0
+/event/verbose 0
+/tracking/verbose 0
+
+/process/em/verbose 0
+
+
+# GEOMETRY
+/Geometry/ArSphere/pressure 10 bar
+/Geometry/ArSphere/LAr false
+/Geometry/ArSphere/radius 1.5 m
+
+# GENERATOR
+/Generator/IonGenerator/region ACTIVE
+/Generator/IonGenerator/atomic_number 83
+/Generator/IonGenerator/mass_number 214
+/Generator/IonGenerator/energy_level 0.
+/Generator/IonGenerator/decay_at_time_zero true
+
+# PERSISTENCY
+/nexus/persistency/outputFile Workshop_GAr_Sphere.sim

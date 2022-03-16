@@ -1,0 +1,27 @@
+## ----------------------------------------------------------------------------
+## nexus | ArgonSphereGen.init.mac
+##
+## Initialization macro to simulate 83-Bi decays in the ArSphere geometry
+## with generation and transportation of Bismuth Decays.
+##
+## The NEXT Collaboration
+## ----------------------------------------------------------------------------
+
+/PhysicsList/RegisterPhysics G4EmStandardPhysics_option4
+/PhysicsList/RegisterPhysics G4DecayPhysics
+/PhysicsList/RegisterPhysics G4RadioactiveDecayPhysics
+/PhysicsList/RegisterPhysics G4OpticalPhysics
+/PhysicsList/RegisterPhysics NexusPhysics
+/PhysicsList/RegisterPhysics G4StepLimiterPhysics
+
+/nexus/RegisterGeometry ArSphere
+
+/nexus/RegisterGenerator IonGenerator
+
+/nexus/RegisterPersistencyManager PersistencyManager
+
+/nexus/RegisterTrackingAction DefaultTrackingAction
+/nexus/RegisterEventAction DefaultEventAction
+/nexus/RegisterRunAction DefaultRunAction
+
+/nexus/RegisterMacro macros/ArgonSphereGen.config.mac
